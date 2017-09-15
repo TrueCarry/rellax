@@ -233,7 +233,8 @@
 
         // Subtracting initialize value, so element stays in same spot as HTML
         var position = updatePosition(percentage, blocks[i].speed) - blocks[i].base;
-
+        if(position < -5000) position = -5000;
+        if(position > 5000) position = 5000;
         // Move that element
         // (Set the new translation and append initial inline transforms.)
         var translate = 'translate3d(0,' + position + 'px,0) ' + blocks[i].transform;
