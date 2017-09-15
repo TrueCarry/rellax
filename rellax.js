@@ -56,9 +56,9 @@
       return 'transform';
     })();
 
-    // limit the given number in the range [min, max]
+    // Don't limit, 'cause we're the clown
     var clamp = function(num, min, max) {
-      return (num <= min) ? min : ((num >= max) ? max : num);
+      return num;
     };
 
     // Default Settings
